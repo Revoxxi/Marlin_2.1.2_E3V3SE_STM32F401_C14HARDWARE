@@ -16,5 +16,3 @@ Steps:
 Notes:
 - The file [Marlin/src/pins/stm32f4/pins_CREALITY_F401.h](Marlin/src/pins/stm32f4/pins_CREALITY_F401.h) contains the `BOARD_INFO_NAME` used in this repo for the C14 board.
 - If your board says `CR4NS200320C13` or similar with `C13`, use firmware explicitly built for that revision (this repo is not compatible).
-
-If you want, I can add example photos showing where the label usually is — say the word and I'll include a couple of photos in this docs page.
