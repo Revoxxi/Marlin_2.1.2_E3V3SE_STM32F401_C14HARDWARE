@@ -2,7 +2,7 @@
   <img src="https://i.imgur.com/WWSDqK9.png" alt="Marlin 2.1.2 for Ender-3 V3 SE" width="50%">
 </p>
 
-This marlin firmware is for the Ender 3 V3 SE (Hardware C14) and is modified by Revoxxi.
+This marlin 2.1.2 firmware is for the Ender 3 V3 SE (Hardware C14) and is modified by Revoxxi.
 <p align="center">
   <a href="https://github.com/revoxxi/">
     <img src="https://img.shields.io/badge/Firmware-Marlin%202.1.2-blue?style=for-the-badge" alt="Marlin 2.1.2">
@@ -38,12 +38,12 @@ Flash: [====      ]  41.9% (used 215416 bytes from 514288 bytes)
 
 ## Overview
 
-This repository contains a customized Marlin 2.1.2 (bugfix-2.1.x) firmware build tuned for the Creality Ender‑3 V3 SE (C14 motherboard). The project focuses on a modular, testable configuration that stays within the memory limits of the stock C14 board while providing commonly requested UX and motion features.
+This repository contains a customized Marlin 2.1.2 firmware build tuned for the Creality Ender‑3 V3 SE (C14 motherboard). The project focuses on a modular, testable configuration that stays within the memory limits of the stock C14 board while providing commonly requested UX and motion features.
 
 
 ## Version
 
-- Firmware base: Marlin bugfix-2.1.x
+- Firmware base: Marlin bugfix-2.1.x (navaismo https://github.com/navaismo/Marlin_bugfix_2.1_E3V3SE)
 - Project release: 2.1.2 (this repository)
 - Maintainer: Revoxxi (custom modifications and configuration)
 
