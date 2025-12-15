@@ -2402,7 +2402,7 @@
   #if ENABLED(DISTINCT_E_FACTORS)
     #define ADVANCE_K { 0.22 }    // (mm) Compression length per 1mm/s extruder speed, per extruder. Override with 'M900 T<tool> K<mm>'.
   #else
-    #define ADVANCE_K 0.0        // (mm) Compression length for all extruders. Override with 'M900 K<mm>'.        // (mm) Compression length applying to all extruders
+    #define ADVANCE_K 0.02        // (mm) Compression length for all extruders. Override with 'M900 K<mm>'.        // (mm) Compression length applying to all extruders
   #endif
   //#define ADVANCE_K_EXTRA       // Add a second linear advance constant, configurable with 'M900 L'.
 #endif
@@ -2608,7 +2608,7 @@
 //
 // G2/G3 Arc Support
 //
-#define ARC_SUPPORT                   // Requires ~3226 bytes
+//#define ARC_SUPPORT                   // Requires ~3226 bytes - DISABLED: Caused layer adhesion & structure issues at high speed
 #if ENABLED(ARC_SUPPORT)
   #define MIN_ARC_SEGMENT_MM      1 // (mm) Minimum length of each arc segment
   #define MAX_ARC_SEGMENT_MM      1.0 // (mm) Maximum length of each arc segment
