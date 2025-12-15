@@ -2,7 +2,7 @@
  * Config.h - Marlin Firmware distilled configuration
  * Usage: Place this file in the 'Marlin' folder with the name 'Config.h'.
  *
- * Exported by Marlin build on 2025-12-15 at 00:33:37.
+ * Exported by Marlin build on 2025-12-15 at 10:48:34.
  */
 
 //
@@ -43,7 +43,7 @@
 #define DEFAULT_NOMINAL_FILAMENT_DIA             1.75
 #define ENABLE_AUTO_OFF_DISPLAY
 #define LIN_ADVANCE
-#define ADVANCE_K                                0.0
+#define ADVANCE_K                                0.02
 
 //
 // Geometry
@@ -104,10 +104,10 @@
 #define STEP_STATE_X                             HIGH
 #define STEP_STATE_Y                             HIGH
 #define STEP_STATE_Z                             HIGH
-#define JUNCTION_DEVIATION_MM                    0.1
-#define DEFAULT_ACCELERATION                     3000
-#define DEFAULT_TRAVEL_ACCELERATION              3000
-#define DEFAULT_RETRACT_ACCELERATION             3000
+#define JUNCTION_DEVIATION_MM                    0.25
+#define DEFAULT_ACCELERATION                     5000
+#define DEFAULT_TRAVEL_ACCELERATION              5000
+#define DEFAULT_RETRACT_ACCELERATION             5000
 #define DEFAULT_MINIMUMFEEDRATE                  0.0
 #define DEFAULT_MINTRAVELFEEDRATE                0.0
 #define MINIMUM_PLANNER_SPEED                    0.05
@@ -238,8 +238,8 @@
 #define PID_K1                                   0.95
 #define PID_MAX                                  255
 #define DEFAULT_Kd                               26.68
-#define DEFAULT_Ki                               3.93
-#define DEFAULT_Kp                               20.49
+#define DEFAULT_Ki                               3.03
+#define DEFAULT_Kp                               29.03
 
 //
 // PID Temp
@@ -471,15 +471,6 @@
 #define PRINTCOUNTER_SAVE_INTERVAL               60
 #define PRINTCOUNTER
 #define SERVICE_WARNING_BUZZES                   3
-
-//
-// Extras
-//
-#define ARC_SUPPORT
-#define MAX_ARC_SEGMENT_MM                       1.0
-#define MIN_ARC_SEGMENT_MM                       1
-#define MIN_CIRCLE_SEGMENTS                      24
-#define N_ARC_CORRECTION                         25
 
 //
 // TMC_Smart
