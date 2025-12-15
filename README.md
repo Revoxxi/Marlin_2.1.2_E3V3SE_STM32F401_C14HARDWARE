@@ -14,6 +14,7 @@ This version of marlin is modified to make serial connection (print over OctoPri
 ## PlatformIO Inspection
 
 RAM:   [==        ]  23.5% (used 15416 bytes from 65536 bytes)
+
 Flash: [====      ]  41.9% (used 215416 bytes from 514288 bytes)
 
 ## Table of Contents
