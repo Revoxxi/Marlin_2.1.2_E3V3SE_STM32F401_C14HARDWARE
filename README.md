@@ -1,17 +1,11 @@
 <p align="center">
-  <img src="https://i.imgur.com/WWSDqK9.png" alt="Marlin 2.1.2 for Ender-3 V3 SE" width="50%">
-</p>
-
-This marlin 2.1.2 firmware is for the Ender 3 V3 SE (Hardware C14) and is modified by Revoxxi.
-<p align="center">
   <a href="https://github.com/revoxxi/">
     <img src="https://img.shields.io/badge/Firmware-Marlin%202.1.2-blue?style=for-the-badge" alt="Marlin 2.1.2">
   </a>
   <img src="https://img.shields.io/badge/Printer-Ender%203%20V3%20SE-orange?style=for-the-badge" alt="Ender 3 V3 SE">
   <img src="https://img.shields.io/badge/Profile-Custom%20Tuned-success?style=for-the-badge" alt="Custom tuned profile">
 </p>
-
-This version of marlin is modified to make serial connection (print over OctoPrint as an example) more stable without resends. For complicated G-code I included Arc. To enable this in Cura go to Marketplace, search Arc Welder, restart Cura and select your model and check the Arc Weld on the right sides settings. Other slicers have other means to enable arcs.
+This version of marlin is modified to make serial connection (print over OctoPrint as an example) more stable without resends, checksum errors, buffer overflows or other issues present in other custom firmware. For complicated G-code I included Arc. To enable this in Cura go to Marketplace, search Arc Welder, restart Cura and select your model and check the Arc Weld on the right sides settings. Other slicers have other means to enable arcs.
 
 > **IMPORTANT — Hardware compatibility**
 >
