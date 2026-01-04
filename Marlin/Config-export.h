@@ -2,7 +2,7 @@
  * Config.h - Marlin Firmware distilled configuration
  * Usage: Place this file in the 'Marlin' folder with the name 'Config.h'.
  *
- * Exported by Marlin build on 2025-12-15 at 10:48:34.
+ * Exported by Marlin build on 2026-01-03 at 23:43:17.
  */
 
 //
@@ -43,7 +43,7 @@
 #define DEFAULT_NOMINAL_FILAMENT_DIA             1.75
 #define ENABLE_AUTO_OFF_DISPLAY
 #define LIN_ADVANCE
-#define ADVANCE_K                                0.02
+#define ADVANCE_K                                0.0
 
 //
 // Geometry
@@ -104,7 +104,7 @@
 #define STEP_STATE_X                             HIGH
 #define STEP_STATE_Y                             HIGH
 #define STEP_STATE_Z                             HIGH
-#define JUNCTION_DEVIATION_MM                    0.25
+#define JUNCTION_DEVIATION_MM                    0.02
 #define DEFAULT_ACCELERATION                     5000
 #define DEFAULT_TRAVEL_ACCELERATION              5000
 #define DEFAULT_RETRACT_ACCELERATION             5000
@@ -124,13 +124,22 @@
 #define SLOWDOWN_DIVISOR                         2
 #define MAX_FEEDRATE_EDIT_VALUES                 { 1000, 1000, 40, 60 }
 #define MAX_ACCEL_EDIT_VALUES                    { 8000, 8000, 8000, 8000 }
-#define S_CURVE_ACCELERATION
 #define EDITABLE_STEPS_PER_UNIT
 #define LIMITED_MAX_FR_EDITING
 #define LIMITED_MAX_ACCEL_EDITING
 #define ADAPTIVE_STEP_SMOOTHING
 #define MULTISTEPPING_LIMIT                      16
 #define MINIMUM_STEPPER_POST_DIR_DELAY           50000
+
+//
+// Motion Control
+//
+#define SHAPING_ZETA_X                           0.15
+#define SHAPING_ZETA_Y                           0.15
+#define INPUT_SHAPING_X
+#define INPUT_SHAPING_Y
+#define SHAPING_FREQ_X                           40.0
+#define SHAPING_FREQ_Y                           42.0
 
 //
 // Endstops
@@ -295,7 +304,7 @@
 //
 #define DEFAULT_LEVELING_FADE_HEIGHT             10.0
 #define SEGMENT_LEVELED_MOVES
-#define GRID_MAX_POINTS_Y                        GRID_MAX_POINTS_X
+#define GRID_MAX_POINTS_Y                        5
 #define ENABLE_LEVELING_FADE_HEIGHT
 #define EXTRAPOLATE_BEYOND_GRID
 #define G26_XY_FEEDRATE_TRAVEL                   100
@@ -304,7 +313,7 @@
 #define MESH_TEST_BED_TEMP                       60
 #define G26_RETRACT_MULTIPLIER                   1.0
 #define MESH_TEST_HOTEND_TEMP                    205
-#define GRID_MAX_POINTS_X                        6
+#define GRID_MAX_POINTS_X                        5
 #define G26_MESH_VALIDATION
 #define LEVELED_SEGMENT_LENGTH                   1.0
 #define G26_XY_FEEDRATE                          20
