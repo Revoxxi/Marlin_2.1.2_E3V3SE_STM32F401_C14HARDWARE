@@ -2,7 +2,7 @@
  * Config.h - Marlin Firmware distilled configuration
  * Usage: Place this file in the 'Marlin' folder with the name 'Config.h'.
  *
- * Exported by Marlin build on 2026-01-03 at 23:43:17.
+ * Exported by Marlin build on 2026-01-04 at 04:22:41.
  */
 
 //
@@ -412,7 +412,7 @@
 //
 // G-code
 //
-#define BLOCK_BUFFER_SIZE                        16
+#define BLOCK_BUFFER_SIZE                        32
 #define FASTER_GCODE_PARSER
 #define DEBUG_FLAGS_GCODE
 
@@ -421,11 +421,11 @@
 //
 #define SERIAL_PORT                              1
 #define BAUDRATE                                 115200
-#define BUFSIZE                                  16
-#define MAX_CMD_SIZE                             96
+#define BUFSIZE                                  32
+#define MAX_CMD_SIZE                             128
 #define PROPORTIONAL_FONT_RATIO                  1.0
 #define SERIAL_OVERRUN_PROTECTION
-#define TX_BUFFER_SIZE                           64
+#define TX_BUFFER_SIZE                           128
 #define D_ROUTINE_AUTO_OFFSET
 #define USER_LEVEL_CHECK                         1
 #define WUHAN_CHENGE_PLATFORM                    1
