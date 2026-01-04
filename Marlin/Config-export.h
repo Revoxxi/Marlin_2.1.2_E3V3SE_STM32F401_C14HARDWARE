@@ -2,7 +2,7 @@
  * Config.h - Marlin Firmware distilled configuration
  * Usage: Place this file in the 'Marlin' folder with the name 'Config.h'.
  *
- * Exported by Marlin build on 2025-12-21 at 22:29:12.
+ * Exported by Marlin build on 2026-01-04 at 05:58:10.
  */
 
 //
@@ -124,7 +124,6 @@
 #define SLOWDOWN_DIVISOR                         2
 #define MAX_FEEDRATE_EDIT_VALUES                 { 1000, 1000, 40, 60 }
 #define MAX_ACCEL_EDIT_VALUES                    { 8000, 8000, 8000, 8000 }
-#define S_CURVE_ACCELERATION
 #define EDITABLE_STEPS_PER_UNIT
 #define LIMITED_MAX_FR_EDITING
 #define LIMITED_MAX_ACCEL_EDITING
@@ -133,20 +132,20 @@
 #define MINIMUM_STEPPER_POST_DIR_DELAY           50000
 
 //
+// Motion Control
+//
+#define SHAPING_ZETA_X                           0.15
+#define SHAPING_ZETA_Y                           0.15
+#define INPUT_SHAPING_X
+#define INPUT_SHAPING_Y
+#define SHAPING_FREQ_X                           40.0
+#define SHAPING_FREQ_Y                           42.0
+
+//
 // Endstops
 //
 #define ENDSTOPPULLUPS
 #define ENDSTOP_INTERRUPTS_FEATURE
-
-//
-// Filament Runout Sensors
-//
-#define FIL_RUNOUT_ENABLED_DEFAULT               true
-#define FIL_RUNOUT_PULLUP
-#define FILAMENT_RUNOUT_SCRIPT                   "M600"
-#define FILAMENT_RUNOUT_SENSOR
-#define NUM_RUNOUT_SENSORS                       1
-#define FIL_RUNOUT_STATE                         HIGH
 
 //
 // Probes
@@ -304,7 +303,7 @@
 #define MESH_TEST_BED_TEMP                       60
 #define G26_RETRACT_MULTIPLIER                   1.0
 #define MESH_TEST_HOTEND_TEMP                    205
-#define GRID_MAX_POINTS_X                        6
+#define GRID_MAX_POINTS_X                        5
 #define G26_MESH_VALIDATION
 #define LEVELED_SEGMENT_LENGTH                   1.0
 #define G26_XY_FEEDRATE                          20
@@ -324,7 +323,6 @@
 //
 // LCD
 //
-#define SHOW_BOOTSCREEN
 #define ENCODER_100X_STEPS_PER_SEC               130
 #define ENCODER_10X_STEPS_PER_SEC                80
 #define ENCODER_RATE_MULTIPLIER
@@ -353,6 +351,7 @@
 #define BABYSTEP_ZPROBE_OFFSET
 #define FLOW_EDIT_MIN                            10
 #define SCROLL_LONG_FILENAMES
+#define BOOT_MARLIN_LOGO_SMALL
 #define PLR_ENABLED_DEFAULT                      true
 #define M73_REPORT_SD_ONLY
 #define ENCODER_5X_STEPS_PER_SEC                 30
@@ -362,7 +361,7 @@
 #define LONG_FILENAME_WRITE_SUPPORT
 #define AUTOTOOL_PRINT
 #define POWER_LOSS_RECOVERY
-#define BABYSTEP_MULTIPLICATOR_XY                1
+#define BABYSTEP_MULTIPLICATOR_XY                0.01
 #define LONG_FILENAME_HOST_SUPPORT
 #define AUTOZ_BRUSH_H                            6.0
 #define AUTOZ_BRUSH_Z                            0
@@ -372,7 +371,6 @@
 #define AUTOZ_TOOL_X                             25
 #define AUTOZ_TOOL_Y                             28
 #define SD_FINISHED_RELEASECOMMAND               "G1 X0 Y215\nM84"
-#define BOOTSCREEN_TIMEOUT                       3000
 #define SET_PROGRESS_PERCENT
 #define DWIN_LCD_BEEP
 #define USE_AUTOZ_TOOL_2
@@ -389,6 +387,7 @@
 #define LCD_FEEDBACK_FREQUENCY_HZ                5000
 #define ENCODER_PULSES_PER_STEP                  4
 #define ENCODER_STEPS_PER_MENU_ITEM              1
+#define SLIM_LCD_MENUS
 #define LCD_FEEDBACK_FREQUENCY_DURATION_MS       2
 
 //
@@ -403,7 +402,7 @@
 //
 // G-code
 //
-#define BLOCK_BUFFER_SIZE                        16
+#define BLOCK_BUFFER_SIZE                        8
 #define FASTER_GCODE_PARSER
 #define DEBUG_FLAGS_GCODE
 
@@ -412,11 +411,11 @@
 //
 #define SERIAL_PORT                              1
 #define BAUDRATE                                 115200
-#define BUFSIZE                                  16
+#define BUFSIZE                                  4
 #define MAX_CMD_SIZE                             96
 #define PROPORTIONAL_FONT_RATIO                  1.0
 #define SERIAL_OVERRUN_PROTECTION
-#define TX_BUFFER_SIZE                           64
+#define TX_BUFFER_SIZE                           32
 #define D_ROUTINE_AUTO_OFFSET
 #define USER_LEVEL_CHECK                         1
 #define WUHAN_CHENGE_PLATFORM                    1
@@ -428,7 +427,6 @@
 #define HIGH_SPEED                               1
 #define SHOW_GRID_VALUES                         1
 #define EMERGENCY_PARSER
-#define RX_BUFFER_SIZE                           1024
 
 //
 // Host
@@ -447,6 +445,7 @@
 #define AUTO_REPORT_TEMPERATURES
 #define EXTENDED_CAPABILITIES_REPORT
 #define CAPABILITIES_REPORT
+#define AUTO_REPORT_POSITION
 
 //
 // Safety
