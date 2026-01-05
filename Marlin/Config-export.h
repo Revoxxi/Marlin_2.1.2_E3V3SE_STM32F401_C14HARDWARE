@@ -2,7 +2,7 @@
  * Config.h - Marlin Firmware distilled configuration
  * Usage: Place this file in the 'Marlin' folder with the name 'Config.h'.
  *
- * Exported by Marlin build on 2026-01-04 at 05:58:10.
+ * Exported by Marlin build on 2026-01-04 at 23:38:17.
  */
 
 //
@@ -411,7 +411,7 @@
 //
 #define SERIAL_PORT                              1
 #define BAUDRATE                                 115200
-#define BUFSIZE                                  4
+#define BUFSIZE                                  32
 #define MAX_CMD_SIZE                             96
 #define PROPORTIONAL_FONT_RATIO                  1.0
 #define SERIAL_OVERRUN_PROTECTION
@@ -422,11 +422,12 @@
 #define PLATFORM_OFFSET                          1
 #define COMPACT_GRID_VALUES                      1
 #define HIGH_SPEED_1                             1
-#define DWIN_RENDER_THUMBNAIL
 #define USE_SWITCH_POWER_200W                    0
 #define HIGH_SPEED                               1
 #define SHOW_GRID_VALUES                         1
+#define SERIAL_XON_XOFF
 #define EMERGENCY_PARSER
+#define RX_BUFFER_SIZE                           1024
 
 //
 // Host

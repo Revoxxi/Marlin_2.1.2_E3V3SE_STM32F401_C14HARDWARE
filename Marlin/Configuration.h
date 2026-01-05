@@ -140,7 +140,7 @@
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
 //#define MACHINE_UUID "00000000-0000-0000-0000-000000000000"
 
-#define DWIN_RENDER_THUMBNAIL  // Enable the Rendering of the Thumbnail Image from Gcode Script for E3V3SE
+//#define DWIN_RENDER_THUMBNAIL  // Enable the Rendering of the Thumbnail Image from Gcode Script for E3V3SE
 
 
 // |                |

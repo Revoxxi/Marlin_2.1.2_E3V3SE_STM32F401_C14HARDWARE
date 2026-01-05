@@ -1245,8 +1245,8 @@
       #define SHAPING_ZETA_X   0.15       // Damping ratio of the X axis (range: 0.0 = no damping to 1.0 = critical damping).
     #endif
     #if ENABLED(INPUT_SHAPING_Y)
-      #define SHAPING_FREQ_Y  42.0        // (Hz) The default dominant resonant frequency on the Y axis.
-      #define SHAPING_ZETA_Y   0.15       // Damping ratio of the Y axis (range: 0.0 = no damping to 1.0 = critical damping).
+      #define SHAPING_FREQ_Y  38.0        // (Hz) The default dominant resonant frequency on the Y axis.
+      #define SHAPING_ZETA_Y   0.10       // Damping ratio of the Y axis (range: 0.0 = no damping to 1.0 = critical damping).
     #endif
     #if ENABLED(INPUT_SHAPING_Z)
       #define SHAPING_FREQ_Z  40.0        // (Hz) The default dominant resonant frequency on the Z axis.
@@ -2731,7 +2731,7 @@
 
 // The ASCII buffer for serial input
 #define MAX_CMD_SIZE 96
-#define BUFSIZE 4
+#define BUFSIZE 32
 
 /**
  * Host Transmit Buffer Size
@@ -2750,12 +2750,12 @@
  * To use flow control, set this buffer size to at least 1024 bytes.
  * :[0, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048]
  */
-//#define RX_BUFFER_SIZE 1024
+#define RX_BUFFER_SIZE 1024
 
 #if RX_BUFFER_SIZE >= 1024
   // Enable to have the controller send XON/XOFF control characters to
   // the host to signal the RX buffer is becoming full.
-  //#define SERIAL_XON_XOFF
+  #define SERIAL_XON_XOFF
 #endif
 
 #if HAS_MEDIA
