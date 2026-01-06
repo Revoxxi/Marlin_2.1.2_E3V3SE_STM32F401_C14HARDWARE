@@ -2,7 +2,7 @@
  * Config.h - Marlin Firmware distilled configuration
  * Usage: Place this file in the 'Marlin' folder with the name 'Config.h'.
  *
- * Exported by Marlin build on 2026-01-06 at 07:55:43.
+ * Exported by Marlin build on 2026-01-06 at 08:46:03.
  */
 
 //
@@ -104,7 +104,7 @@
 #define STEP_STATE_X                             HIGH
 #define STEP_STATE_Y                             HIGH
 #define STEP_STATE_Z                             HIGH
-#define JUNCTION_DEVIATION_MM                    0.25
+#define JUNCTION_DEVIATION_MM                    0.01
 #define DEFAULT_ACCELERATION                     5000
 #define DEFAULT_TRAVEL_ACCELERATION              5000
 #define DEFAULT_RETRACT_ACCELERATION             5000
@@ -130,16 +130,6 @@
 #define ADAPTIVE_STEP_SMOOTHING
 #define MULTISTEPPING_LIMIT                      16
 #define MINIMUM_STEPPER_POST_DIR_DELAY           50000
-
-//
-// Motion Control
-//
-#define SHAPING_ZETA_X                           0.15
-#define SHAPING_ZETA_Y                           0.05
-#define INPUT_SHAPING_X
-#define INPUT_SHAPING_Y
-#define SHAPING_FREQ_X                           40.0
-#define SHAPING_FREQ_Y                           36.0
 
 //
 // Endstops
