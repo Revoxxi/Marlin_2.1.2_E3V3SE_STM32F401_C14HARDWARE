@@ -2,7 +2,7 @@
  * Config.h - Marlin Firmware distilled configuration
  * Usage: Place this file in the 'Marlin' folder with the name 'Config.h'.
  *
- * Exported by Marlin build on 2026-01-04 at 23:38:17.
+ * Exported by Marlin build on 2026-01-06 at 07:55:43.
  */
 
 //
@@ -135,11 +135,11 @@
 // Motion Control
 //
 #define SHAPING_ZETA_X                           0.15
-#define SHAPING_ZETA_Y                           0.15
+#define SHAPING_ZETA_Y                           0.05
 #define INPUT_SHAPING_X
 #define INPUT_SHAPING_Y
 #define SHAPING_FREQ_X                           40.0
-#define SHAPING_FREQ_Y                           42.0
+#define SHAPING_FREQ_Y                           36.0
 
 //
 // Endstops
@@ -352,7 +352,6 @@
 #define FLOW_EDIT_MIN                            10
 #define SCROLL_LONG_FILENAMES
 #define BOOT_MARLIN_LOGO_SMALL
-#define PLR_ENABLED_DEFAULT                      true
 #define M73_REPORT_SD_ONLY
 #define ENCODER_5X_STEPS_PER_SEC                 30
 #define SHOW_ELAPSED_TIME
@@ -360,7 +359,6 @@
 #define BABYSTEP_INVERT_Z                        false
 #define LONG_FILENAME_WRITE_SUPPORT
 #define AUTOTOOL_PRINT
-#define POWER_LOSS_RECOVERY
 #define BABYSTEP_MULTIPLICATOR_XY                0.01
 #define LONG_FILENAME_HOST_SUPPORT
 #define AUTOZ_BRUSH_H                            6.0
@@ -378,8 +376,6 @@
 #define EVENT_GCODE_SD_ABORT                     "G28XY\nG1 X0 Y215\nM84"
 #define SDCARD_RATHERRECENTFIRST
 #define AUTOTOOL_RESULT
-#define POWER_LOSS_MIN_Z_CHANGE                  0.05
-#define POWER_LOSS_ZRAISE                        5
 
 //
 // Interface
@@ -402,8 +398,9 @@
 //
 // G-code
 //
-#define BLOCK_BUFFER_SIZE                        8
+#define BLOCK_BUFFER_SIZE                        32
 #define FASTER_GCODE_PARSER
+#define MEATPACK_ON_SERIAL_PORT_1
 #define DEBUG_FLAGS_GCODE
 
 //
@@ -412,10 +409,10 @@
 #define SERIAL_PORT                              1
 #define BAUDRATE                                 115200
 #define BUFSIZE                                  32
-#define MAX_CMD_SIZE                             96
+#define MAX_CMD_SIZE                             128
 #define PROPORTIONAL_FONT_RATIO                  1.0
 #define SERIAL_OVERRUN_PROTECTION
-#define TX_BUFFER_SIZE                           32
+#define TX_BUFFER_SIZE                           256
 #define D_ROUTINE_AUTO_OFFSET
 #define USER_LEVEL_CHECK                         1
 #define WUHAN_CHENGE_PLATFORM                    1
@@ -425,9 +422,10 @@
 #define USE_SWITCH_POWER_200W                    0
 #define HIGH_SPEED                               1
 #define SHOW_GRID_VALUES                         1
-#define SERIAL_XON_XOFF
+#define NO_TIMEOUTS                              1000
 #define EMERGENCY_PARSER
-#define RX_BUFFER_SIZE                           1024
+#define ADVANCED_OK
+#define RX_BUFFER_SIZE                           512
 
 //
 // Host
@@ -438,7 +436,6 @@
 #define PRINTJOB_TIMER_AUTOSTART
 #define HOST_PROMPT_SUPPORT
 #define HOST_ACTION_COMMANDS
-#define HOST_STATUS_NOTIFICATIONS
 
 //
 // Reporting

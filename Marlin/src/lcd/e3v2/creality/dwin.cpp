@@ -6525,7 +6525,9 @@ void HMI_PauseOrStop()
         thermalManager.setTargetBed(0);
         thermalManager.zero_fan_speeds();
 
-        recovery.info.sd_printing_flag = false; // rock_20210820
+        #if ENABLED(POWER_LOSS_RECOVERY)
+          recovery.info.sd_printing_flag = false; // rock_20210820
+        #endif
 // rock_20210830 The following sentence is absolutely not required. It will perform two main interface operations.
 // dwin_abort_flag = true; //Reset feedrate, return to Home
 #ifdef ACTION_ON_CANCEL
@@ -6724,7 +6726,9 @@ void HMI_Filament()
       thermalManager.zero_fan_speeds();
 
       // Rock 20210820
-      recovery.info.sd_printing_flag = false;
+      #if ENABLED(POWER_LOSS_RECOVERY)
+        recovery.info.sd_printing_flag = false;
+      #endif
       // rock_20210830 The following sentence is absolutely not required, and the main interface operation will be performed twice.
       // Reset feedrate, return to Home
       // dwin_abort_flag = true;
@@ -11045,11 +11049,13 @@ void DWIN_Update()
   if (!HMI_flag.disallow_recovery_flag)
   {
     // SD card print
-    if (recovery.info.sd_printing_flag)
-    {
-      // Rock 20210814
-      Remove_card_window_check();
-    }
+    #if ENABLED(POWER_LOSS_RECOVERY)
+      if (recovery.info.sd_printing_flag)
+      {
+        // Rock 20210814
+        Remove_card_window_check();
+      }
+    #endif
     // SD card print
     if (HMI_flag.cloud_printing_flag || card.isPrinting())
     {
@@ -11672,7 +11678,9 @@ void Show_G_Pic(void)
         HMI_flag.print_finish = false;
         HMI_ValueStruct.show_mode = 0;
         // Rock 20210819
-        recovery.info.sd_printing_flag = true;
+        #if ENABLED(POWER_LOSS_RECOVERY)
+          recovery.info.sd_printing_flag = true;
+        #endif
 
         card.openAndPrintFile(card.filename);
 
